@@ -7,13 +7,22 @@ var isTarget = false
 #	if playerInContact && isTarget:
 #		print("touching me and wants to hold me")
 
+func _ready() -> void:
+	name = "Object" + String(self.get_instance_id())
+
 func CheckTarget(target: Node):
 	if target == self:
 		isTarget = true
-		print(String(self.get_instance_id()) + ": player wants to hold me")
+		print(name + ": player wants to hold me")
 	else: 
 		isTarget = false
-		print(self.name + ": player doesn't want to hold me")
+		print(name + ": player doesn't want to hold me")
+
+func CheckPlayerIntent(player: Node):
+	if isTarget:
+		get_parent().remove_child(self)
+		player.find_node("Hands").add_child(self)
+		z_index = 4
 
 func _on_Object_body_entered(body: Node) -> void:
 	if body.name == "Player":

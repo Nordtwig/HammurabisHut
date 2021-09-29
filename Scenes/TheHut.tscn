@@ -33,26 +33,18 @@ visible = false
 position = Vector2( 511.376, 293.997 )
 current = true
 
-[node name="NewDestinationTimer" type="Timer" parent="."]
-wait_time = 0.1
-
 [node name="Line2D" type="Line2D" parent="."]
 width = 4.0
 default_color = Color( 1, 0.4, 0.610937, 1 )
 
-[node name="Table" parent="." instance=ExtResource( 2 )]
+[node name="Furniture" type="Node" parent="."]
+
+[node name="Table" parent="Furniture" instance=ExtResource( 2 )]
 position = Vector2( 522.255, 116.097 )
 rotation = -1.5708
-
-[node name="Slot2" parent="Table/Slots" index="1"]
-containedItemName = ""
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 392, 367 )
 
-[node name="Table2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 870.997, 305.34 )
-
-[connection signal="timeout" from="NewDestinationTimer" to="." method="_on_NewDestinationTimer_timeout"]
-
-[editable path="Table"]
+[editable path="Furniture/Table"]
+[editable path="Furniture/Table/Slots/Slot"]

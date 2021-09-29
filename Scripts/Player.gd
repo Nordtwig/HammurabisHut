@@ -33,7 +33,13 @@ func Navigate(delta: float):
 		distanceToMove -= distanceToNextPoint
 	if path.size() <= 0:
 		line.points = PoolVector2Array()
+		ArrivedAtDest()
 		
 func MakePath():
 	path = nav.get_simple_path(position, targetDestination.position)
 	line.points = path
+
+func ArrivedAtDest():
+	targetDestination = null
+	get_tree().call_group("Objects", "CheckPlayerIntent", self)
+	
