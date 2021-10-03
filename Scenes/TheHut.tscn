@@ -6,9 +6,9 @@
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=4]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 673.778, 190.187, 669.059, 85.4166, 947.775, 84.9782, 950.023, 543.46, 74.9565, 543.46, 368.907, 194.906, 74.9565, 84.9782, 370.794, 84.9782 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ) ]
-outlines = [ PoolVector2Array( 74.9565, 84.9782, 74.9565, 543.46, 950.023, 543.46, 947.775, 84.9782, 669.059, 85.4166, 673.778, 190.187, 368.907, 194.906, 370.794, 84.9782 ) ]
+vertices = PoolVector2Array( 673.778, 190.187, 669.059, 85.4166, 947.775, 84.9782, 819.138, 189.243, 948.449, 479.013, 950.023, 543.46, 74.9565, 543.46, 821.026, 479.013, 74.9565, 84.9782, 368.907, 194.906, 370.794, 84.9782, 948.286, 189.225 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 7, 6, 8, 9 ), PoolIntArray( 8, 10, 9 ), PoolIntArray( 7, 9, 0, 3 ), PoolIntArray( 3, 2, 11 ) ]
+outlines = [ PoolVector2Array( 74.9565, 84.9782, 74.9565, 543.46, 950.023, 543.46, 948.449, 479.013, 821.026, 479.013, 819.138, 189.243, 948.286, 189.225, 947.775, 84.9782, 669.059, 85.4166, 673.778, 190.187, 368.907, 194.906, 370.794, 84.9782 ) ]
 
 [node name="Main" type="Node2D" groups=[
 "GameMaster",
@@ -49,8 +49,18 @@ containedItemName = "Reagent"
 [node name="Slot2" parent="Furniture/Table/Slots" index="1"]
 containedItemName = "Reagent"
 
+[node name="Table2" parent="Furniture" instance=ExtResource( 2 )]
+position = Vector2( 889.874, 333.656 )
+
+[node name="Slot" parent="Furniture/Table2/Slots" index="0"]
+containedItemName = "Station"
+
+[node name="Slot2" parent="Furniture/Table2/Slots" index="1"]
+containedItemName = ""
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 392, 367 )
 
 [editable path="Furniture/Table"]
 [editable path="Furniture/Table/Slots/Slot"]
+[editable path="Furniture/Table2"]
