@@ -15,5 +15,7 @@ func _ready() -> void:
 		isOccupied = false
 
 func _on_Slot_Clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) && isOccupied:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		get_tree().call_group("GameMaster", "RequestNewDestination", $PickUpPosition.global_position)
+		if !isOccupied:
+			get_tree().call_group("Player", "TargetAcquired", self)

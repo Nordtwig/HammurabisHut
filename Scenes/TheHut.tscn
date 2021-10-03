@@ -47,16 +47,16 @@ rotation = -1.5708
 containedItemName = "Reagent"
 
 [node name="Slot2" parent="Furniture/Table/Slots" index="1"]
-containedItemName = "Reagent"
+containedItemName = "Station"
 
 [node name="Table2" parent="Furniture" instance=ExtResource( 2 )]
 position = Vector2( 889.874, 333.656 )
 
 [node name="Slot" parent="Furniture/Table2/Slots" index="0"]
-containedItemName = "Station"
+containedItemName = "Reagent"
 
 [node name="Slot2" parent="Furniture/Table2/Slots" index="1"]
-containedItemName = ""
+containedItemName = "Reagent"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 392, 367 )

@@ -23,5 +23,5 @@ texture = ExtResource( 1 )
 position = Vector2( 0, -12 )
 shape = SubResource( 1 )
 
-[node name="Hands" type="Position2D" parent="."]
+[node name="Item" type="Position2D" parent="."]
 position = Vector2( 0, -47 )
