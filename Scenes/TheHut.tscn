@@ -43,6 +43,12 @@ default_color = Color( 1, 0.4, 0.610937, 1 )
 position = Vector2( 522.255, 116.097 )
 rotation = -1.5708
 
+[node name="Slot" parent="Furniture/Table/Slots" index="0"]
+containedItemName = "Reagent"
+
+[node name="Slot2" parent="Furniture/Table/Slots" index="1"]
+containedItemName = "Reagent"
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 392, 367 )
 
